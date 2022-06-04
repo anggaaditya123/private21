@@ -175,7 +175,7 @@ echo "\n";
     $getData = get_between($alarm[1], '"nameId":"Hadiah Referral",', '},');
     $amountTersedia = get_between($getData, '"remainNum":', ',"sendAmount":');
     echo '[ '.date('H:i:s').' ] Reward Tersedia Adalah : '.$amountTersedia.PHP_EOL;
-    if ($amountTersedia < 10) {
+    if ($amountTersedia < 1) {
         echo '[ '.date('H:i:s').' ] Menunggu Hingga Tersedia'.PHP_EOL;
         goto awal;
     } else {
@@ -412,7 +412,7 @@ echo "\n";
     $getData = get_between($alarm[1], '"nameId":"Hadiah Referral",', '},');
     $amountTersedia = get_between($getData, '"remainNum":', ',"sendAmount":');
     echo '[ '.date('H:i:s').' ] Reward Tersedia Adalah : '.$amountTersedia.PHP_EOL;
-    if ($amountTersedia < 10) {
+    if ($amountTersedia < 1) {
         echo '[ '.date('H:i:s').' ] Menunggu Hingga Tersedia'.PHP_EOL;
         goto awal1;
     } else {
@@ -644,7 +644,7 @@ echo "\n";
         $getData = get_between($alarm[1], '"nameId":"Hadiah Referral",', '},');
         $amountTersedia = get_between($getData, '"remainNum":', ',"sendAmount":');
         echo '[ '.date('H:i:s').' ] Reward Tersedia Adalah : '.$amountTersedia.PHP_EOL;
-        if ($amountTersedia < 10) {
+        if ($amountTersedia < 1) {
             echo '[ '.date('H:i:s').' ] Menunggu Hingga Tersedia'.PHP_EOL;
             goto awal2;
         } else {
@@ -897,7 +897,7 @@ $alarm = curlget('https://app.oneaset.co.id/api/app/biz/activity/finc/activityIn
 $getData = get_between($alarm[1], '"nameId":"Hadiah Referral",', '},');
 $amountTersedia = get_between($getData, '"remainNum":', ',"sendAmount":');
 echo '[ '.date('H:i:s').' ] Reward Tersedia Adalah : '.$amountTersedia.PHP_EOL;
-if ($amountTersedia < 10) {
+if ($amountTersedia < 1) {
     echo '[ '.date('H:i:s').' ] Menunggu Hingga Tersedia'.PHP_EOL;
     goto awal3;
 } else {
